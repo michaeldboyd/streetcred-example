@@ -18,7 +18,7 @@ app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/views/index.html');
+  response.sendFile(__dirname + '/views/index.html');
 });
 
 // listen for requests :)
@@ -31,8 +31,8 @@ const listOrganizations = async () => {
     result.forEach(org => console.log(org));
 }
 
-const writeCredentialDefinition = async () => {
-  var result = await client.
+const createCredentialDefinition = async () => {
+  var result = await client.createCredentialDefinition()
 }
 
 
